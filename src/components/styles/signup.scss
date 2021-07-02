@@ -79,6 +79,16 @@ $formColor: #f4f8ff;
   }
 }
 
+.link {
+  &:visited {
+    color: black;
+  }
+
+  &:hover {
+    color: #00E676;
+  }
+}
+
 @media (max-width: $maxwidthmid) {
   .signup-Wrap {
     width: 85%;

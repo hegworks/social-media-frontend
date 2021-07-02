@@ -113,7 +113,7 @@ const SignUp = props => {
 							Submit
 						</SignUpButton>
 						<p>
-							Already Signed Up? <Link to="/signin">Sign In here</Link>
+							Already Signed Up? <Link className="link" to="/signin">Sign In here</Link>
 						</p>
 					</form>
 				</div>

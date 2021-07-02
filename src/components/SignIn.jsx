@@ -80,7 +80,7 @@ const SignIn = props => {
 						/>
 						<SignInButton type="submit" variant="contained" color="primary"> Submit </SignInButton>
 						<p>
-							Don't have an account? <Link to="/signup">Sign Up here</Link>
+							Don't have an account? <Link className="link" to="/signup">Sign Up here</Link>
 						</p>
 					</form>
 				</div>
