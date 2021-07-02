@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
 import { useHistory } from "react-router";
+
+import {CookieManager} from "./CookieManager";
 
 const SignIn = props => {
 	// states
@@ -11,8 +12,9 @@ const SignIn = props => {
 
 	// react-router history
 	const history = useHistory();
+	// signin funciton from CookieManager
+	const {signin} = useContext(CookieManager)
 
-	// functions
 	const handleSubmit = async e => {
 		e.preventDefault();
 		const user = {
@@ -20,8 +22,10 @@ const SignIn = props => {
 			password: password
 		};
 		try {
-			await axios.post("http://localhost:8880/api/auth/login", user);
-			history.push("/home");
+			const response = await axios.post("http://localhost:8880/api/auth/login", user);
+			signin(response.data.token)
+			console.log(response.data.token)
+			// history.push("/home");
 		} catch (err) {
 			console.log(err);
 		}

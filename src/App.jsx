@@ -5,7 +5,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/home";
 
-class App extends React.Component{
+class App extends React.Component {
 	render() {
 		return (
 			<Router>
