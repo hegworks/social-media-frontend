@@ -2,10 +2,13 @@ import React, { useContext } from "react";
 import { CookieManager } from "./CookieManager";
 
 const Home = (props) => {
-	const { token } = useContext(CookieManager);
+	const { token, userid } = useContext(CookieManager);
 
 	return (
-		<h1>{token}</h1>
+		<div>
+			<h6>{token}</h6>
+			<h6>{userid}</h6>
+		</div>
 	);
 }
  

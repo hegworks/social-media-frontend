@@ -39,8 +39,8 @@ const SignIn = props => {
 		};
 		try {
 			const response = await axios.post("http://localhost:8880/api/auth/login", user);
-			signin(response.data.token)
-			console.log(response.data.token)
+			signin(response.data.token, response.data._id)
+			console.log(response.data)
 			history.push("/home");
 		} catch (err) {
 			console.log(err);
