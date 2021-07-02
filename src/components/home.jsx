@@ -1,8 +1,11 @@
-import CookieManager from "./CookieManager";
+import React, { useContext } from "react";
+import { CookieManager } from "./CookieManager";
 
 const Home = (props) => {
+	const { token } = useContext(CookieManager);
+
 	return (
-		<h1>welcome home!</h1>
+		<h1>{token}</h1>
 	);
 }
  
