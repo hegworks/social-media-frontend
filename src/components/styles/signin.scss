@@ -13,6 +13,9 @@ $formColor: #f4f8ff;
 }
 
 .login-Wrap {
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
   width: 70%;
   height: 70%;
   display: flex;
@@ -36,11 +39,20 @@ $formColor: #f4f8ff;
   }
 }
 
+.login-left {
+  h3 {
+    align-self: center;
+    padding-top: 10px;
+  }
+}
+
+
 .desc {
-  font-size: 40px;
+  font-size: 35px;
+  align-self: center;
 
   span {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
     color: #1199ee;
     margin-bottom: 10px;
@@ -51,10 +63,17 @@ $formColor: #f4f8ff;
   height: 300px;
   padding: 30px;
   background-color: $formColor;
+  border: 2px solid #ccc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 1s;
+
+  &:hover {
+    box-shadow: 0 0 5px #5e86cc, 0 0 20px #385c99, 0 0 70px #385c99;
+    border: 2px solid #385c99;
+  }
 }
 
 @media (max-width: $maxwidthmid) {
@@ -93,5 +112,23 @@ $formColor: #f4f8ff;
   .login-right {
     padding-top: 10%;
     padding-left: 0%;
+  }
+}
+
+$animationDelay: 1;
+
+@for $i from 1 through 15 {
+  .projects div:nth-of-type(#{$i}) {
+    animation-delay: #{0.3+($i)/30}s;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
