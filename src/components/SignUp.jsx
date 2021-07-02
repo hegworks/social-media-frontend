@@ -11,38 +11,10 @@ const SignUp = props => {
 	const [lastName, setLastName] = useState("")
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
+
 	const history = useHistory();
-
+	
 	// functions
-	// const handleSubmit = (event) => {
-	// 	// TODO: check if empty
-
-	// 	// make requst body
-	// 	const reqBody = {
-	// 		username: username,
-	// 		firstName: firstName,
-	// 		lastName: lastName,
-	// 		email: email,
-	// 		password: password
-	// 	};
-
-	// 	// send request
-	// 	fetch(
-	// 		"http://localhost:8880/api/auth/register",
-	// 		{
-	// 			method: "POST",
-	// 			headers: {
-	// 				"Content-Type": "application/json"
-	// 			},
-	// 			body: JSON.stringify(reqBody)
-	// 		}
-	// 	).then(response => {console.log(response)}
-	// 	).then(data => console.log(data))
-	// 	.catch(err => console.log(err))
-		
-	// 	//TODO: use .then to handle fail and success
-	// }
-		
 	const handleSubmit = async e => {
 		e.preventDefault();
 		const user = {
@@ -111,34 +83,3 @@ const SignUp = props => {
 };
 
 export default SignUp;
-	/* 
-	handleSubmit(event) {
-		// TODO: check if empty
-
-		// make requst body
-		const reqBody = {
-			username: username,
-			firstName: firstname,
-			lastName: lastname,
-			email: email,
-			password: password
-		};
-
-		// send request
-		fetch(
-			"http://localhost:8880/api/auth/register",
-			{
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(reqBody)
-			}
-		)/* .then(response => {
-				console.log("GOT HEREEEE")
-				console.log("got response: " + response.json());
-				this.setState({resp: response.json()})
-			}
-		).then(data => <h1>{data}</h1>)
-		
-			//TODO: use .then to handle fail and success */
