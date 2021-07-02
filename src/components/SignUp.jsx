@@ -54,7 +54,7 @@ const SignUp = props => {
 		};
 		try {
 			await axios.post("http://localhost:8880/api/auth/register", user);
-			history.push("/login");
+			history.push("/signin");
 		} catch (err) {
 			console.log(err);
 		}
