@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Cookies from "universal-cookie";
 
 export const CookieManager = React.createContext(null)
@@ -6,7 +6,17 @@ const cookies = new Cookies();
 
 const CookieManagerProvider = (props) => {
 	// states
-	const [token, setToken] = useState("")
+	const [token, setToken] = useState(null)
+
+	useEffect(() => {
+		const savedToken = cookies.get("token")
+		if (savedToken) {
+			setToken(savedToken);
+		}
+		return () => {
+			setToken(null);
+		}
+	}, [])
 
 	const signin = (tok) => {
 		console.log("got to signin")
@@ -20,12 +30,21 @@ const CookieManagerProvider = (props) => {
 		)
 	}
 
+	const signout = () => {
+		console.log("got to signout");
+
+		setToken(null);
+
+		cookies.remove("token");
+	};
+
 	return (
 		<CookieManager.Provider
 			value={
 				{
 					token,
-					signin
+					signin,
+					signout
 				}
 			}
 		>
