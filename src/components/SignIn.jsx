@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import axios from "axios";
 
 import { useHistory } from "react-router";
@@ -9,8 +9,24 @@ const SignIn = props => {
 	const [creds, setCreds] = useState("");
 	const [password, setPssword] = useState("");
 
+	// react-router history
+	const history = useHistory();
+
 	// functions
-	const handleSubmit = async e => {};
+	const handleSubmit = async e => {
+		e.preventDefault();
+		const user = {
+			credential: creds,
+			password: password
+		};
+		try {
+			await axios.post("http://localhost:8880/api/auth/login", user);
+			history.push("/signin");
+			Router.push("/home")
+		} catch (err) {
+			console.log(err);
+		}
+	};
 
 	return (
 		<div>
