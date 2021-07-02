@@ -55,7 +55,7 @@ const SignIn = props => {
 						<span> SMA </span>
 					</h2>
 					<h3>
-						Connect with your friends around the wor.
+						Connect with your friends around the world.
 					</h3>
 				</div>
 				<div className="login-right">
