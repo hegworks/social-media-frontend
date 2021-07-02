@@ -9,8 +9,15 @@ const CookieManagerProvider = (props) => {
 	const [token, setToken] = useState("")
 
 	const signin = (tok) => {
+		console.log("got to signin")
+
 		setToken(tok)
-		console.log(token)
+
+		cookies.set(
+			"token",
+			token,
+			{ maxAge: 2 * 60 * 60 }
+		)
 	}
 
 	return (
