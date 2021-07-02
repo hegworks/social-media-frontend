@@ -22,7 +22,7 @@ class SignIn extends React.Component {
 		return (
 			<div>
 				<h1>Welcome to SMA</h1>
-				<form>
+				<form onSubmit={this.handleSubmit}>
 					<input
 						type="text"
 						value={this.state.creds}
