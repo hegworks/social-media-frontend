@@ -66,7 +66,7 @@ class SignUp extends React.Component {
 					<button>Submit</button>
 				</form>
 				<h2>
-					Do you have an account?
+					Already Signed Up?{" "}
 					<Link to="/signin">Sign In here</Link>
 				</h2>
 			</div>
