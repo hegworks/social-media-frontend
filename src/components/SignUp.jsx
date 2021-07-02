@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-// import { useHistory } from "react-router";
-// const history = useHistory();
+import { useHistory } from "react-router";
 
 const SignUp = props => {
 	// states
@@ -12,38 +11,39 @@ const SignUp = props => {
 	const [lastName, setLastName] = useState("")
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
+	const history = useHistory();
 
 	// functions
-	const handleSubmit = (event) => {
-		// TODO: check if empty
+	// const handleSubmit = (event) => {
+	// 	// TODO: check if empty
 
-		// make requst body
-		const reqBody = {
-			username: username,
-			firstName: firstName,
-			lastName: lastName,
-			email: email,
-			password: password
-		};
+	// 	// make requst body
+	// 	const reqBody = {
+	// 		username: username,
+	// 		firstName: firstName,
+	// 		lastName: lastName,
+	// 		email: email,
+	// 		password: password
+	// 	};
 
-		// send request
-		fetch(
-			"http://localhost:8880/api/auth/register",
-			{
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(reqBody)
-			}
-		).then(response => {console.log(response)}
-		).then(data => console.log(data))
-		.catch(err => console.log(err))
+	// 	// send request
+	// 	fetch(
+	// 		"http://localhost:8880/api/auth/register",
+	// 		{
+	// 			method: "POST",
+	// 			headers: {
+	// 				"Content-Type": "application/json"
+	// 			},
+	// 			body: JSON.stringify(reqBody)
+	// 		}
+	// 	).then(response => {console.log(response)}
+	// 	).then(data => console.log(data))
+	// 	.catch(err => console.log(err))
 		
-		//TODO: use .then to handle fail and success
-	}
+	// 	//TODO: use .then to handle fail and success
+	// }
 		
-	/* const handleSubmit = async e => {
+	const handleSubmit = async e => {
 		e.preventDefault();
 		const user = {
 			username: username,
@@ -53,12 +53,12 @@ const SignUp = props => {
 			password: password
 		};
 		try {
-			await axios.post("/auth/register", user);
-			// history.push("/login");
+			await axios.post("http://localhost:8880/api/auth/register", user);
+			history.push("/login");
 		} catch (err) {
 			console.log(err);
 		}
-	}; */
+	};
 
 	return (
 		<div>
