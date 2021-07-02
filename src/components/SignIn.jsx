@@ -78,7 +78,7 @@ const SignIn = props => {
 							placeholder="Your password"
 							onChange={event => setPssword(event.target.value)}
 						/>
-						<SignInButton type="submit" variant="contained" color="primary"> Submit </SignInButton>
+						<SignInButton type="submit" variant="contained" color="primary"> Sign in </SignInButton>
 						<p>
 							Don't have an account? <Link className="link" to="/signup">Sign Up here</Link>
 						</p>

@@ -110,7 +110,7 @@ const SignUp = props => {
 							onChange={event => setPassword(event.target.value)}
 						/>
 						<SignUpButton type="submit" variant="contained" color="primary">
-							Submit
+							Sign up
 						</SignUpButton>
 						<p>
 							Already Signed Up? <Link className="link" to="/signin">Sign In here</Link>
