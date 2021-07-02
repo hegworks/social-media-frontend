@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import { useHistory } from "react-router";
@@ -21,8 +21,7 @@ const SignIn = props => {
 		};
 		try {
 			await axios.post("http://localhost:8880/api/auth/login", user);
-			history.push("/signin");
-			Router.push("/home")
+			history.push("/home");
 		} catch (err) {
 			console.log(err);
 		}
