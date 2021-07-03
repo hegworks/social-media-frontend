@@ -55,7 +55,7 @@ const Topbar = props => {
               <Items
                 key={user._id}
                 value={user.firstName + " " + user.lastName + " (" + user.username + ")"}
-                link={user._id}
+                link={"profile/" + user._id}
                 image={user.profilePicture}
               />
             )
