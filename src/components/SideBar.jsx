@@ -20,10 +20,10 @@ const SideBarButton = styled(Button)({
 
 const SideBar = props => {
 	const history = useHistory();
-	const { signout } = useContext(CookieManager);
+	const { signout, userid } = useContext(CookieManager);
 
 	const handleProfileButtonClick = () => {
-		history.push("/profile")
+		history.push("/profile/" + userid)
 	}
 
 	const handleDashbaordButtonClick = () => {

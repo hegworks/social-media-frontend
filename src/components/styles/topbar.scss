@@ -53,7 +53,6 @@ $iconColor: black;
         display: flex;
         align-items: center;
 
-
         &:hover {
           box-shadow: 0 0 5px #839fcf, 0 0 20px #b2c0da, 0 0 70px #c5cedd;
         }
@@ -67,7 +66,7 @@ $iconColor: black;
 
       .searchInput {
         background-color: $searchbarColor;
-        color: white;
+        color: $backgroundColor;
         border: none;
         width: 75%;
 
