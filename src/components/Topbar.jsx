@@ -1,7 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Search } from "@material-ui/icons";
-import { Link } from "react-router-dom";
-import { CookieManager } from "./CookieManager";
 import './styles/topbar.scss';
 import { Button, Container, Avatar } from "@material-ui/core";
 import { styled } from "@material-ui/core/styles";
