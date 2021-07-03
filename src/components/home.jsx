@@ -10,7 +10,9 @@ const Home = (props) => {
 			<Topbar />
 			<div className="homeContainer">
 				<SideBar />
-				<Feed />
+				<div className="feed">
+					<Feed />
+				</div>
 			</div>
 		</div>
 	);

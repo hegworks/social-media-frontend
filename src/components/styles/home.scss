@@ -6,6 +6,11 @@
   .homeContainer {
     display: flex;
     width: 100%;
+
+    .feed {
+      padding-left: 1px;
+      padding-right: 1px;
+    }
   }
 }
 
