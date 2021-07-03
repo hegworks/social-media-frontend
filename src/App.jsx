@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./style.scss"
+import "./style.scss";
 
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
-import Profile from "./components/Profile"
+import Profile from "./components/Profile";
 import Home from "./components/home";
 import AddPost from "./components/AddPost";
+import FollowRequest from "./components/FollowRequest";
 
 class App extends React.Component {
 	render() {
@@ -28,6 +29,9 @@ class App extends React.Component {
 						</Route>
 						<Route path="/addpost">
 							<AddPost />
+						</Route>
+						<Route path="/flwreq">
+							<FollowRequest />
 						</Route>
 					</Switch>
 				</div>
