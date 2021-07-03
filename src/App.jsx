@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 // import Profile from "./components/Profile"
-import Home from "./components/Home";
+import Home from "./components/home";
 
 class App extends React.Component {
 	render() {
