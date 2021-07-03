@@ -7,7 +7,7 @@ import { AccountBox, Dashboard, MeetingRoom } from "@material-ui/icons";
 import { CookieManager } from "./CookieManager";
 import FriendsList from "./FreindsList";
 
-import './styles/sidebar.scss'
+import './styles/SideBar.scss'
 
 const SideBarButton = styled(Button)({
 	height: 50,

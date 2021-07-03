@@ -43,7 +43,7 @@ const FriendsList = props => {
 		return () => {
 			// cleanup
 		}
-	}, [])
+	}, /* [] */)
 	
 	return (
 		<div></div>
