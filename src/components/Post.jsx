@@ -65,14 +65,14 @@ const Post = ({ post }) => {
         <div className="postBottom">
           <div className="postBottomLeft">
             <Favorite
-              className="likeIcon"
+              className="heartIcon"
               onClick={likeHandler}
             />
             <ThumbUpAlt
               className="likeIcon"
               onClick={likeHandler}
             />
-            <span className="postLikeCounter">{like} people like this..</span>
+            <span className="postLikeCounter">{like} likes..</span>
           </div>
           <div className="postBottomRight">
           </div>
