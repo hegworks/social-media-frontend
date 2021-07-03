@@ -5,6 +5,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Profile from "./components/Profile"
 import Home from "./components/home";
+import AddPost from "./components/AddPost";
 
 class App extends React.Component {
 	render() {
@@ -23,6 +24,9 @@ class App extends React.Component {
 						</Route>
 						<Route path="/profile">
 							<Profile />
+						</Route>
+						<Route path="/addpost">
+							<AddPost />
 						</Route>
 					</Switch>
 				</div>
