@@ -5,18 +5,17 @@ import { styled } from "@material-ui/core/styles";
 
 import { CookieManager } from "./CookieManager";
 
-import './styles/addpost.scss'
+import "./styles/addpost.scss";
 import axios from "axios";
 
-const FormData = require('form-data')
+const FormData = require("form-data");
 
 const AddPost = props => {
 	// states
-	const [selectedFile, setSelectedFile] = useState(null)
-	const [description, setDescription] = useState("")
+	const [selectedFile, setSelectedFile] = useState(null);
+	const [description, setDescription] = useState("");
 
 	const { userid } = useContext(CookieManager);
-
 
 	const handleFileSelected = event => {
 		const file = event.target.files[0];
@@ -25,20 +24,18 @@ const AddPost = props => {
 	};
 
 	const handlePublish = event => {
-		event.preventDefault(); // stop auto refreshing
-
 		const dataToSend = {
 			userid: userid,
 			desc: description,
 			file: selectedFile
-		}
+		};
 
-		console.log(dataToSend)
+		console.log(dataToSend);
 
-		const form = new FormData()
-		form.append('userid', dataToSend.userid)
-		form.append('desc', dataToSend.desc)
-		form.append('file', dataToSend.file)
+		const form = new FormData();
+		form.append("userid", dataToSend.userid);
+		form.append("desc", dataToSend.desc);
+		form.append("file", dataToSend.file);
 
 		axios.post("http://localhost:8880/api/posts", form);
 	};
