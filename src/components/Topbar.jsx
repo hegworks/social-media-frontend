@@ -3,14 +3,16 @@ import { Search } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { CookieManager } from "./CookieManager";
 import './styles/topbar.scss';
-import { Button, Container, TextField, Avatar, Divider, Box, Input } from "@material-ui/core";
+import { Button, Container, Avatar } from "@material-ui/core";
 import { styled } from "@material-ui/core/styles";
 import axios from "axios";
 
 const TopbarButton = styled(Button)({
   justifyContent: "left",
   display: "flex",
-  alignItems: "center"
+  alignItems: "center",
+  backgroundColor: 'white',
+  borderColor: 'white'
 });
 
 const TopbarAvatar = styled(Avatar)({
@@ -19,11 +21,14 @@ const TopbarAvatar = styled(Avatar)({
   margin: 5
 });
 
+const TopbarContainer = styled(Container)({
+  width: "50vw"
+})
+
 const Items = ({ value, link, image }) => {
   return (
     <TopbarButton
-      variant="outlined"
-      color="default"
+      variant="contained"
       fullWidth
       type="submit"
       href={link}
@@ -90,11 +95,12 @@ const Topbar = props => {
             />
           </div>
         </div>
-        <div className="topbarEnd" />
       </div>
-      <Container maxWidth="sm">
-        {list}
-      </Container>
+      <div className="container">
+        <TopbarContainer maxWidth="sm">
+          {list}
+        </TopbarContainer>
+      </div>
     </div>
   )
 }
