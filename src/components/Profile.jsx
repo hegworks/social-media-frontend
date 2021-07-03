@@ -34,7 +34,12 @@ const Profile = props => {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img className="profileCoverImg" alt="" />
+              <img className="profileCoverImg" alt="#152238" />
+              <img
+                className="profileUserImg"
+                src={`http://localhost:8880/${user.profilePicture}`}
+                alt=""
+              />
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName">{user.username}</h4>
