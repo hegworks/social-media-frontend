@@ -16,7 +16,7 @@ const PostAvatar = styled(Avatar)({
 
 
 const Post = ({ post }) => {
-  const { token, userid } = useContext(CookieManager)
+  const { userid } = useContext(CookieManager)
   const [like, setLike] = useState(post.likes.length)
   const [isLiked, setIsLiked] = useState(false)
   const [user, setUser] = useState({})
@@ -65,14 +65,14 @@ const Post = ({ post }) => {
         <div className="postBottom">
           <div className="postBottomLeft">
             <Favorite
-              className="likeIcon"
+              className="heartIcon"
               onClick={likeHandler}
             />
             <ThumbUpAlt
               className="likeIcon"
               onClick={likeHandler}
             />
-            <span className="postLikeCounter">{like} people like this..</span>
+            <span className="postLikeCounter">{like} likes..</span>
           </div>
           <div className="postBottomRight">
           </div>
