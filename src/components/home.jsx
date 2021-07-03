@@ -3,6 +3,7 @@ import { CookieManager } from "./CookieManager";
 import Topbar from "./Topbar";
 import SideBar from "./SideBar";
 import "./styles/home.scss"
+import Feed from "./Feed";
 
 const Home = (props) => {
 	const { token, userid } = useContext(CookieManager);
@@ -10,9 +11,10 @@ const Home = (props) => {
 	return (
 		<div className="home">
 			<Topbar />
-			<h6>{token}</h6>
-			<h6>{userid}</h6>
-			<SideBar />
+			<div className="homeContainer">
+				<SideBar />
+				<Feed />
+			</div>
 		</div>
 	);
 }

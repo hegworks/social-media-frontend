@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./style.scss"
 
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
