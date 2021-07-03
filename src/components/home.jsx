@@ -8,7 +8,7 @@ const Home = (props) => {
 	const { token, userid } = useContext(CookieManager);
 
 	return (
-		<div className="background">
+		<div className="home">
 			<Topbar />
 			<h6>{token}</h6>
 			<h6>{userid}</h6>
