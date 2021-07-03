@@ -22,7 +22,7 @@ class App extends React.Component {
 						<Route path="/home">
 							<Home />
 						</Route>
-						<Route path="/profile">
+						<Route path="/profile/:id">
 							<Profile />
 						</Route>
 						<Route path="/addpost">
