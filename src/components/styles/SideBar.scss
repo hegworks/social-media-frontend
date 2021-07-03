@@ -1,5 +1,27 @@
+$borderColor: grey;
+$backgroundColor: white;
+
 .sidebar-container {
-	display: flex;
-	flex-direction: column;
-	width: 20%;
+	padding-top: 50px;
+	width: 20vw;
+	height: calc(100vh - 100px);
+	overflow-y: scroll;
+	background-color: $backgroundColor;
+	position: sticky;
+	border-right: 2px solid $borderColor;
+
+	&::-webkit-scrollbar {
+		width: 0px;
+	}
+
+	.flex {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.icons {
+		font-size: 20px !important;
+		margin-right: 5px;
+	}
 }
