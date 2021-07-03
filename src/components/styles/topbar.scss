@@ -1,13 +1,18 @@
 $maxwidthlow: 1300px;
 $maxwidthmid: 1450px;
+$backgroundColor: black;
+$searchbarColor: white;
+$borderColor: #1199ee;
+$iconColor: black;
 
 .topbar {
   display: flex;
   width: 100%;
   flex-direction: column;
+  //border-bottom: 2px solid $borderColor;
 
   .stickypart {
-    background-color: #121212;
+    background-color: $backgroundColor;
     width: 100vw;
     height: 50px;
     display: flex;
@@ -18,7 +23,6 @@ $maxwidthmid: 1450px;
 
     .topbarLeft {
       flex: 1;
-
 
       .logo {
         animation-name: fade-in;
@@ -33,7 +37,7 @@ $maxwidthmid: 1450px;
 
         &:hover {
           color: white;
-          text-shadow: 0 0 5px #839fcf, 0 0 20px #b2c0da, 0 0 70px #c5cedd;
+          text-shadow: 0 0 5px #96b0db, 0 0 20px #a1b5da, 0 0 70px #708bb9;
         }
       }
     }
@@ -44,18 +48,26 @@ $maxwidthmid: 1450px;
       .searchBar {
         width: 50vw;
         height: 30px;
-        background-color: white;
+        background-color: $searchbarColor;
         border-radius: 30px;
         display: flex;
         align-items: center;
+
+
+        &:hover {
+          box-shadow: 0 0 5px #839fcf, 0 0 20px #b2c0da, 0 0 70px #c5cedd;
+        }
       }
 
       .searchIcon {
+        color: $iconColor;
         font-size: 20px !important;
         margin-left: 10px;
       }
 
       .searchInput {
+        background-color: $searchbarColor;
+        color: white;
         border: none;
         width: 75%;
 
