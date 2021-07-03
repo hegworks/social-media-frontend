@@ -35,10 +35,7 @@ const Post = ({ post }) => {
 
   const likeHandler = () => {
     try {
-      axios.put(
-        "/posts/" + post._id + "/like",
-        { userid: userid },
-        { headers: { Authorization: `Bearer ${token}` } })
+      axios.put("http://localhost:8880/api/posts/" + post._id + "/like", { userid: userid })
     } catch (err) {
       console.log(err)
     }
