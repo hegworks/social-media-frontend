@@ -16,7 +16,7 @@ const PostAvatar = styled(Avatar)({
 
 
 const Post = ({ post }) => {
-  const { token, userid } = useContext(CookieManager)
+  const { userid } = useContext(CookieManager)
   const [like, setLike] = useState(post.likes.length)
   const [isLiked, setIsLiked] = useState(false)
   const [user, setUser] = useState({})
